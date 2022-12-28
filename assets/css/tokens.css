@@ -168,14 +168,14 @@
   --md-sys-typescale-display-large-font-family-name: Google Sans;
   --md-sys-typescale-display-large-font-family-style: Regular;
   --md-sys-typescale-display-large-font-weight: 400px;
-  --md-sys-typescale-display-large-font-size: 70px;
+  --md-sys-typescale-display-large-font-size: 120px;
   --md-sys-typescale-display-large-line-height: 64px;
   --md-sys-typescale-display-large-letter-spacing: -0.25px;
   /* display - medium */
   --md-sys-typescale-display-medium-font-family-name: Google Sans;
   --md-sys-typescale-display-medium-font-family-style: Regular;
   --md-sys-typescale-display-medium-font-weight: 400px;
-  --md-sys-typescale-display-medium-font-size: 60px;
+  --md-sys-typescale-display-medium-font-size: 80px;
   --md-sys-typescale-display-medium-line-height: 52px;
   --md-sys-typescale-display-medium-letter-spacing: 0px;
   /* display - small */
@@ -189,21 +189,21 @@
   --md-sys-typescale-headline-large-font-family-name: Google Sans;
   --md-sys-typescale-headline-large-font-family-style: Regular;
   --md-sys-typescale-headline-large-font-weight: 400px;
-  --md-sys-typescale-headline-large-font-size: 32px;
+  --md-sys-typescale-headline-large-font-size: 48px;
   --md-sys-typescale-headline-large-line-height: 40px;
   --md-sys-typescale-headline-large-letter-spacing: 0px;
   /* headline - medium */
   --md-sys-typescale-headline-medium-font-family-name: Google Sans;
   --md-sys-typescale-headline-medium-font-family-style: Regular;
   --md-sys-typescale-headline-medium-font-weight: 400px;
-  --md-sys-typescale-headline-medium-font-size: 28px;
+  --md-sys-typescale-headline-medium-font-size: 42px;
   --md-sys-typescale-headline-medium-line-height: 36px;
   --md-sys-typescale-headline-medium-letter-spacing: 0px;
   /* headline - small */
   --md-sys-typescale-headline-small-font-family-name: Google Sans;
   --md-sys-typescale-headline-small-font-family-style: Regular;
   --md-sys-typescale-headline-small-font-weight: 400px;
-  --md-sys-typescale-headline-small-font-size: 24px;
+  --md-sys-typescale-headline-small-font-size: 36px;
   --md-sys-typescale-headline-small-line-height: 32px;
   --md-sys-typescale-headline-small-letter-spacing: 0px;
   /* body - large */
@@ -269,4 +269,5 @@
   --md-sys-typescale-title-small-font-size: 14px;
   --md-sys-typescale-title-small-line-height: 20px;
   --md-sys-typescale-title-small-letter-spacing: 0.10px;
+
 }

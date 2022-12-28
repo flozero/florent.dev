@@ -11,11 +11,6 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     'nuxt-icon'
   ],
-  colorMode: {
-    classSuffix: '',
-    preference: 'system', // default value of $colorMode.preference
-    fallback: 'dark',
-  },
   googleFonts: {
     families: {
       "Google+Sans": true

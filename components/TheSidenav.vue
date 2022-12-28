@@ -10,7 +10,7 @@
         <li class="sm:mb-6 flex items-center justify-center text-center">
           <nuxt-link to="/videos">
             <Icon name="gala:tv" class="mb-1"/>
-            <div class="text-label">Videos</div>
+            <div class="text-label">Courses</div>
           </nuxt-link>
         </li>
       </ul>
@@ -35,18 +35,10 @@
 </template>
 
 <script setup lang="ts">
-type Theme = 'light' | 'dark'
-const setColorTheme = (newTheme: Theme) => {
-  const colorMode = useColorMode()
-  console.log("je suis la", colorMode)
-  colorMode.preference = newTheme
-}
 </script>
 
 <style scoped>
 .sidenav {
-  /* background: var(--md-sys-color-surface); */
-  /* color: var(--md-sys-color-on-surface); */
   @apply fixed flex py-6 shadow bg-primary text-onPrimary;
 
   z-index: 8;

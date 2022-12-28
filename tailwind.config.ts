@@ -13,9 +13,7 @@ export default <Partial<Config>>{
     'error.{js,ts,vue}',
     'content/**/*.md',
   ],
-  darkMode: 'class',
   theme: {
-    darkSelector: '.dark',
     extend: {
       colors: {
         primary: "var(--md-sys-color-primary-light)",

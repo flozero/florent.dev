@@ -1,14 +1,19 @@
 <template>
   <div>
     <div class="content-container">
-      <Card class="p-8 md:p-16 mb-10 text-center bg-primaryContainer text-onPrimaryContainer">
-          <h1 class="text-display font-bold">Florent giraud</h1>
+      <!-- <nuxt-img
+        provider="imagekit"
+        src="/mountainOne.png"
+        height="400"
+        fit="cover"
+        class="w-full"
+        :modifiers="modifs"
+      /> -->
+      <Card class=" md:py-40 py-24 mb-10 text-center bg-primaryContainer text-onPrimaryContainer imgKit">
+          <h1 class="text-display">Florent giraud</h1>
           <h2 class="text-headline mb-8">
             You are more than the framework you've mastered.
           </h2>
-          <Button>
-            About me
-          </Button>
       </Card>
       <main class="max-w-[1200px] mx-auto pb-20 md:pb-0">
         <!-- <section id="me">
@@ -35,3 +40,29 @@
     </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+
+const modifs = {
+    overlayText: 'overlay made easy',
+    overlayRadius: 30,
+    overlayTextBackground: 'FFFFFF80',
+    overlayTextFontSize: '45',
+    overlayTextColor: '000000',
+    overlayTextPadding: '40'
+}
+
+</script>
+
+<style scoped>
+
+.imgKit {
+  background-image: url("https://ik.imagekit.io/fgiraud/mountainThree.png");
+  background-repeat: no-repeat;
+  background-position:  100px;
+  background-size: cover;
+  background-position-y: 0px;
+  background-position-x: 0px;
+  background-attachment: fixed;
+}
+</style>
