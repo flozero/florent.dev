@@ -1,0 +1,57 @@
+html, body, #__nuxt {
+    /* background-color: var(--md-sys-color-surface); */
+    color: var(--md-sys-color-on-surface);
+    @apply h-full;
+}
+
+svg {
+  @apply text-2xl;
+}
+
+.content-container {
+    @apply pt-2 px-2 flex-grow pb-12;
+}
+
+@media screen and (min-width: 600px) {
+  .content-container {
+    @apply pl-24 ;
+  }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+  /* .dark .prose,
+  .dark .prose h1,
+  .dark .prose h2,
+  .dark .prose h2 a,
+  .dark .prose h3,
+  .dark .prose h3 a {
+    color: white;
+    text-decoration: none;
+  }
+  .dark .prose a {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .prose code {
+    color: inherit;
+  }
+  .prose blockquote {
+    color: dark;
+  }
+  .dark .prose blockquote {
+    color: white;
+  }
+  
+  .img-cont img {
+    @apply h-full w-full object-cover;
+  }
+   */

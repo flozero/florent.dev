@@ -1,0 +1,26 @@
+{
+    "extends": "@antfu",
+    "ignorePatterns": [
+      "/.github/workflows/"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "*.spec.ts", "/**/*.md"
+        ],
+        "rules": {
+          "comma-dangle": [
+            "error",
+            "never"
+          ],
+          "semi": [
+            "error",
+            "never"
+          ],
+          "@typescript-eslint/semi": "off",
+          "@typescript-eslint/comma-dangle": "off"
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,57 @@
+import type { Config } from 'tailwindcss'
+
+export default <Partial<Config>>{
+  content: [
+    'components/**/*.{vue,js,ts}',
+    'layouts/**/*.vue',
+    'pages/**/*.vue',
+    'composables/**/*.{js,ts}',
+    'plugins/**/*.{js,ts}',
+    'App.{js,ts,vue}',
+    'app.{js,ts,vue}',
+    'Error.{js,ts,vue}',
+    'error.{js,ts,vue}',
+    'content/**/*.md',
+  ],
+  darkMode: 'class',
+  theme: {
+    darkSelector: '.dark',
+    extend: {
+      colors: {
+        primary: "var(--md-sys-color-primary-light)",
+        onPrimary: "var(--md-sys-color-on-primary-light)",
+        primaryContainer: "var(--md-sys-color-primary-container-light)",
+        onPrimaryContainer: "var(--md-sys-color-on-primary-container-light)",
+        colorSecondary: "var(--md-sys-color-secondary-light)",
+        onSecondary: "var(--md-sys-color-on-secondary-light)",
+        secondaryContainer: "var(--md-sys-color-secondary-container-light)",
+        onSecondaryContainer: "var(--md-sys-color-on-secondary-container-light)",
+        tertiary: "var(--md-sys-color-tertiary-light)",
+        onTertiary: "var(--md-sys-color-on-tertiary-light)",
+        tertiaryContainer: "var(--md-sys-color-tertiary-container-light)",
+        onTertiaryContainer: "var(--md-sys-color-on-tertiary-container-light)",
+        error: "var(--md-sys-color-error-light)",
+        errorContainer: "var(--md-sys-color-error-container-light)",
+        onError: "var(--md-sys-color-on-error-light)",
+        onErrorContainer: "var(--md-sys-color-on-error-container-light)",
+        background: "var(--md-sys-color-background-light)",
+        onBackground: "var(--md-sys-color-on-background-light)",
+        surface: "var(--md-sys-color-surface-light)",
+        onSurface: "var(--md-sys-color-on-surface-light)",
+        surfaceVariant: "var(--md-sys-color-surface-variant-light)",
+        onSurfaceVariant: "var(--md-sys-color-on-surface-variant-light)",
+        outline: "var(--md-sys-color-outline-light)",
+        inverseOnSurface: "var(--md-sys-color-inverse-on-surface-light)",
+        inverseSurface: "var(--md-sys-color-inverse-surface-light)",
+        inversePrimary: "var(--md-sys-color-inverse-primary-light)",
+        shadow: "var(--md-sys-color-shadow-light)",
+        surfaceTint: "var(--md-sys-color-surface-tint-light)",
+        outlineVariant: "var(--md-sys-color-outline-variant-light)",
+        scrim: "var(--md-sys-color-scrim-light)",
+      },
+    }
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
+}
