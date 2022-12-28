@@ -6,7 +6,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image-edge',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode',
     '@nuxt/content',
     '@nuxtjs/robots',
     '@nuxtjs/google-fonts',

@@ -22,7 +22,7 @@ export default <Partial<Config>>{
         onPrimary: "var(--md-sys-color-on-primary-light)",
         primaryContainer: "var(--md-sys-color-primary-container-light)",
         onPrimaryContainer: "var(--md-sys-color-on-primary-container-light)",
-        colorSecondary: "var(--md-sys-color-secondary-light)",
+        secondary: "var(--md-sys-color-secondary-light)",
         onSecondary: "var(--md-sys-color-on-secondary-light)",
         secondaryContainer: "var(--md-sys-color-secondary-container-light)",
         onSecondaryContainer: "var(--md-sys-color-on-secondary-container-light)",

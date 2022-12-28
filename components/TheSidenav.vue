@@ -14,15 +14,23 @@
           </nuxt-link>
         </li>
       </ul>
-      <button class="text-center"
-       :aria-label="$colorMode.preference"
-        type="button"
-        @click="setColorTheme($colorMode.preference === 'dark' ? 'light' : 'dark')"
-      >
-        <Icon name="fa6-regular:moon" class="mb-1" v-if="$colorMode.preference === 'dark'"/>
-        <Icon name="fa6-regular:star" class="mb-1" v-else/>
-        <div class="text-label">Color</div>
-      </button>
+      <div class="text-center">
+        <div class="mb-6">
+          <a href="https://www.linkedin.com/in/fgiraud42/" target="_blank">
+            <Icon name="brandico:linkedin"/>
+          </a>
+        </div>
+        <div class="mb-6">
+          <a href="https://github.com/jsbaguette" target="_blank">
+            <Icon name="brandico:github"/>
+          </a>
+        </div>
+        <div>
+          <a href="https://twitter.com/flozeroo" target="_blank">
+            <Icon name="brandico:twitter"/>
+          </a>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -37,9 +45,9 @@ const setColorTheme = (newTheme: Theme) => {
 
 <style scoped>
 .sidenav {
-  background: var(--md-sys-color-surface);
-  color: var(--md-sys-color-on-surface);
-  @apply fixed flex py-6 shadow;
+  /* background: var(--md-sys-color-surface); */
+  /* color: var(--md-sys-color-on-surface); */
+  @apply fixed flex py-6 shadow bg-primary text-onPrimary;
 
   z-index: 8;
 }

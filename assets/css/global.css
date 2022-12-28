@@ -1,7 +1,5 @@
 html, body, #__nuxt {
-    /* background-color: var(--md-sys-color-surface); */
-    color: var(--md-sys-color-on-surface);
-    @apply h-full;
+    @apply h-full bg-surface;
 }
 
 svg {
@@ -14,13 +12,13 @@ svg {
 
 @media screen and (min-width: 600px) {
   .content-container {
-    @apply pl-24 ;
+    @apply pl-24;
   }
 }
 
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
 }
 .page-enter,
 .page-leave-to {
