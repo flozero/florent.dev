@@ -14,7 +14,7 @@
           </nuxt-link>
         </li>
         <li class="md:mb-6 flex items-center justify-center text-center">
-          <nuxt-link to="/videos">
+          <nuxt-link to="/blog">
             <Icon name="gala:editor" class="mb-1"/>
             <div class="text-label">Blog</div>
           </nuxt-link>

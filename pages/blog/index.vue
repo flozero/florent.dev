@@ -1,10 +1,29 @@
 <template>
-    <main>
+    <main class="content-container">
         Blog
         <!-- <AppTitle>{{ title }}</AppTitle>
         <AppIntro>{{ description }}</AppIntro>
         <Tags :section="section" />
         <ItemList v-if="articles !== null" :list="articles" :section="section" /> -->
+        <ul class="py-6 m-auto max-w-4xl">
+          <li v-for="item in articles" :key="item._path" class="py-4 border-b">
+            <NuxtLink
+              :to="item.url || item._path"
+              :target="item.url ? '_blank' : '_self'"
+            >
+              <NuxtImg
+                :provider="item.provider"
+                :src="item.image"
+                :alt="item.title"
+                width="272"
+                height="272"
+                fit="thumb"
+                format="webp"
+                class="scale-90 transition-all duration-400 hover:scale-100 rounded"
+              />
+            </NuxtLink>
+          </li>
+        </ul>
     </main>
 </template>
 
