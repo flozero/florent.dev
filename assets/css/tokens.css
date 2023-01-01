@@ -210,22 +210,22 @@
   --md-sys-typescale-body-large-font-family-name: Google Sans;
   --md-sys-typescale-body-large-font-family-style: Regular;
   --md-sys-typescale-body-large-font-weight: 400px;
-  --md-sys-typescale-body-large-font-size: 16px;
-  --md-sys-typescale-body-large-line-height: 24px;
+  --md-sys-typescale-body-large-font-size: 18px;
+  --md-sys-typescale-body-large-line-height: 26px;
   --md-sys-typescale-body-large-letter-spacing: 0.50px;
   /* body - medium */
   --md-sys-typescale-body-medium-font-family-name: Google Sans;
   --md-sys-typescale-body-medium-font-family-style: Regular;
   --md-sys-typescale-body-medium-font-weight: 400px;
-  --md-sys-typescale-body-medium-font-size: 14px;
-  --md-sys-typescale-body-medium-line-height: 20px;
+  --md-sys-typescale-body-medium-font-size: 16px;
+  --md-sys-typescale-body-medium-line-height: 22px;
   --md-sys-typescale-body-medium-letter-spacing: 0.25px;
   /* body - small */
   --md-sys-typescale-body-small-font-family-name: Google Sans;
   --md-sys-typescale-body-small-font-family-style: Regular;
   --md-sys-typescale-body-small-font-weight: 400px;
-  --md-sys-typescale-body-small-font-size: 12px;
-  --md-sys-typescale-body-small-line-height: 16px;
+  --md-sys-typescale-body-small-font-size: 15px;
+  --md-sys-typescale-body-small-line-height: 19px;
   --md-sys-typescale-body-small-letter-spacing: 0.40px;
   /* label - large */
   --md-sys-typescale-label-large-font-family-name: Google Sans;

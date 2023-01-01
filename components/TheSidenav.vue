@@ -1,16 +1,22 @@
 <template>
     <div class="sidenav">
       <ul>
-        <li class="sm:mb-6 flex items-center justify-center text-center">
+        <li class="md:mb-6 flex items-center justify-center text-center">
           <nuxt-link to="/">
             <Icon name="gala:layer" class="mb-1"/>
             <div class="text-label">Home</div>
           </nuxt-link>
         </li>
-        <li class="sm:mb-6 flex items-center justify-center text-center">
+        <li class="md:mb-6 flex items-center justify-center text-center">
           <nuxt-link to="/videos">
             <Icon name="gala:tv" class="mb-1"/>
             <div class="text-label">Courses</div>
+          </nuxt-link>
+        </li>
+        <li class="md:mb-6 flex items-center justify-center text-center">
+          <nuxt-link to="/videos">
+            <Icon name="gala:editor" class="mb-1"/>
+            <div class="text-label">Blog</div>
           </nuxt-link>
         </li>
       </ul>

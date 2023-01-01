@@ -57,7 +57,7 @@ const modifs = {
 <style scoped>
 
 .imgKit {
-  background-image: url("https://ik.imagekit.io/fgiraud/mountainThree.png");
+  background-image: url("https://ik.imagekit.io/fgiraud/tr:h400/mountainThree.png");
   background-repeat: no-repeat;
   background-position:  100px;
   background-size: cover;
