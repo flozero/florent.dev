@@ -8,7 +8,7 @@
             Here's a list of all my articles
           </p>
         </div>
-        <ul class="grid grid-cols-2">
+        <ul class="grid grid-cols-1 md:grid-cols-2">
           <li v-for="article in articles" :key="article._path" class="py-4 border-b">
             <PreviewArticle :article="article" />
           </li>

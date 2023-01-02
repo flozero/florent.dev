@@ -31,7 +31,6 @@ const { data: articles } = await useAsyncData('all-articles',
     .find()
 )
 
-console.log(articles.value)
 </script>
 
 <style scoped>
