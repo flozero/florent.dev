@@ -24,32 +24,3 @@ svg {
 .page-leave-to {
   opacity: 0;
 }
-/* 
-  .dark .prose,
-  .dark .prose h1,
-  .dark .prose h2,
-  .dark .prose h2 a,
-  .dark .prose h3,
-  .dark .prose h3 a {
-    color: white;
-    text-decoration: none;
-  }
-  .dark .prose a {
-    color: white;
-    text-decoration: underline;
-  }
-  
-  .prose code {
-    color: inherit;
-  }
-  .prose blockquote {
-    color: dark;
-  }
-  .dark .prose blockquote {
-    color: white;
-  }
-  
-  .img-cont img {
-    @apply h-full w-full object-cover;
-  }
-   */

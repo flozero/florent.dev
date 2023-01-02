@@ -1,9 +1,7 @@
 <template>
   <div class="body-large h-full">
-    <div>
-      <TheSidenav />
-      <NuxtPage />
-    </div>
+    <TheSidenav />
+    <NuxtPage />
   </div>
 </template>
 

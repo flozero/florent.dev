@@ -8,12 +8,6 @@
           </nuxt-link>
         </li>
         <li class="md:mb-6 flex items-center justify-center text-center">
-          <nuxt-link to="/videos">
-            <Icon name="gala:tv" class="mb-1"/>
-            <div class="text-label">Courses</div>
-          </nuxt-link>
-        </li>
-        <li class="md:mb-6 flex items-center justify-center text-center">
           <nuxt-link to="/blog">
             <Icon name="gala:editor" class="mb-1"/>
             <div class="text-label">Blog</div>
@@ -27,7 +21,7 @@
           </a>
         </div>
         <div class="mb-6">
-          <a href="https://github.com/jsbaguette" target="_blank">
+          <a href="https://github.com/flozero" target="_blank">
             <Icon name="brandico:github"/>
           </a>
         </div>

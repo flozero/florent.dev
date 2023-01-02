@@ -1,6 +1,6 @@
 <template>
   <main
-    class="content-container mx-auto max-w-6xl"
+    class="content-container mx-auto max-w-[1400px]"
   >
     <article v-if="article !== null">
       <header v-if="article" class="py-4 mb-4">
@@ -24,19 +24,18 @@
           class="rounded-3xl"
         />
       </div>
-      <section aria-label="summary" class="mb-10">
-        <p class="text-body mb-4">
+      <section aria-label="summary" class="mb-4">
+        <p class="text-body">
           {{ article.description }}
         </p>
       </section>
-      <!-- <TagsList class="mb-2" :tags="article.tags" :section="section" /> -->
       <hr class="bg-primary">
       <div class="grid grid-cols-8 mt-4">
         <aside class="col-span-full lg:col-span-2 row-start-1 w-full">
-          <BlogToc :links="article.body.toc.links" class="sticky top-20" />
+          <BlogToc :links="article.body.toc.links" class="block lg:sticky top-20" />
         </aside>
         <div
-          class="col-span-full md:col-span-6 md:col-start-1 md:row-start-1 prose w-full pr-4 text-body"
+          class="col-span-full md:col-span-6 md:col-start-1 row-start-2 lg:row-start-1 prose w-full pr-4 text-body pb-20"
         >
           <ContentRenderer :value="article">
             <template #empty>
@@ -45,14 +44,12 @@
           </ContentRenderer>
         </div>
       </div>
-      <!-- <BlogPrevNext :prev="prev" :next="next" /> -->
     </article>
   </main>
 </template>
 
 
 <script setup lang="ts">
-// import type { BlogPost, PrevNext, Sections } from '~/types'
 const { path } = useRoute()
 const { data: article } = await useAsyncData(path.replace(/\/$/, ''),
   () => queryContent('blog')
