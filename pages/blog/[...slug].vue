@@ -126,6 +126,7 @@ const readText = (text: string) => {
   }
   
   const _text = document.querySelector("#content-to-read")?.innerText
+  _text.replace("\"\"", "")
   const utterThis = new SpeechSynthesisUtterance(_text);
 
   utterThis.onend = function (event) {
