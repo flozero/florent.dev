@@ -7,6 +7,15 @@
         <h1 class="text-headline font-bold">
           {{ article.title }}
         </h1>
+        <Button @click="readText">READ</Button>
+        <Button @click="pauseText">PAUSE</Button>
+        <Button @click="resumeText">RESUME</Button>
+        <Button @click="cancel">CANCEL</Button>
+        <select v-model="voiceSelected">
+          <option v-for="voice in voices" :key="voice" :value="voice">
+            {{  voice.name  }} ({{  voice.lang  }})
+          </option>
+        </select>
         <time
           :datetime="article.date"
           class="tracking-widest text-title text-primary"
@@ -36,6 +45,7 @@
         </aside>
         <div
           class="col-span-full md:col-span-6 md:col-start-1 row-start-2 lg:row-start-1 prose w-full pr-4 text-body pb-20"
+          id="content-to-read"
         >
           <ContentRenderer :value="article">
             <template #empty>
@@ -67,6 +77,77 @@ const [prev, next] = data.value || []
 const section = 'blog'
 
 useCreateBlogHead(article)
+
+const synth = ref(null);
+const voices = ref([])
+const voiceSelected = ref(null)
+
+const pauseText = () => {
+  synth.value.pause();
+}
+
+const resumeText = () => {
+  synth.value.resume();
+}
+
+const cancel = () => {
+  synth.value.cancel();
+}
+
+const populateVoiceList = () => {
+  voices.value = synth.value.getVoices().sort(function (a, b) {
+    if (!voiceSelected.value) {
+      if (a.default) {
+        voiceSelected.value = a
+      }
+      if (b.default) {
+        voiceSelected.value = b
+      }
+    }
+    const aname = a.name.toUpperCase();
+    const bname = b.name.toUpperCase();
+
+    if (aname < bname) {
+      return -1;
+    } else if (aname == bname) {
+      return 0;
+    } else {
+      return +1;
+    }
+  });
+
+  // voiceSelected.value = voices.value[0]
+}
+
+const readText = (text: string) => {
+  if (synth.value.speaking) {
+    console.error("speechSynthesis.speaking");
+    return;
+  }
+  
+  const _text = document.querySelector("#content-to-read")?.innerText
+  const utterThis = new SpeechSynthesisUtterance(_text);
+
+  utterThis.onend = function (event) {
+    console.log("SpeechSynthesisUtterance.onend");
+  };
+
+  utterThis.onerror = function (event) {
+    console.error("SpeechSynthesisUtterance.onerror");
+  };
+
+    utterThis.voice = unref(voiceSelected)
+    utterThis.pitch = 1;
+    utterThis.rate = 0.9;
+    synth.value.speak(utterThis);
+}
+
+onMounted(() => {
+  synth.value = window.speechSynthesis;
+  synth.value.onvoiceschanged = () => {
+    populateVoiceList()
+  }
+})
 </script>
 
 
