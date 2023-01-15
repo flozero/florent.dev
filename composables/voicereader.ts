@@ -6,7 +6,7 @@ export function useVoiceReader() {
     const voiceSelected: Ref<SpeechSynthesisVoice | null> = ref(null)
     const isPending = ref(false)
     const isPaused = ref(false)
-    const errored = ref(false)
+    const errored = ref(true)
 
     const populateVoiceList = () => {
       const _found = synth.value?.getVoices().find(function (v) {
