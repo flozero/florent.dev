@@ -1,9 +1,9 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
   },
   modules: [
+    '@vueuse/nuxt',
     '@nuxt/image-edge',
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
@@ -32,11 +32,11 @@ export default defineNuxtConfig({
     },
     documentDriven: true
   },
-   nitro: {
-    prerender: {
-      routes: ['/sitemap.xml']
-    }
-  },
+  //  nitro: {
+  //   prerender: {
+  //     routes: ['/sitemap.xml']
+  //   }
+  // },
   build: {
     transpile: ['lite-youtube'],
   },

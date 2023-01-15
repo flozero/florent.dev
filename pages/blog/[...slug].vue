@@ -32,10 +32,20 @@
       <hr class="bg-primary">
       <div class="grid grid-cols-8 mt-4">
         <aside class="col-span-full lg:col-span-2 row-start-1 w-full">
-          <BlogToc :links="article.body.toc.links" class="block lg:sticky top-20" />
+          <div class="block lg:sticky top-20">
+            <nav class="p-4 bg-primaryContainer text-onPrimaryContainer border border-slate-200 rounded-lg mb-4 ">
+              <div class="">
+                <Icon v-if="!isPending || isPaused" name="fa6-regular:circle-play" class="text-5xl mr-4 text-primary" @click="() => isPaused ? resume() : read()" />
+                <Icon v-else name="fa6-regular:circle-pause" class="text-5xl mr-4 text-primary" @click="pause"/>
+                <Icon name="fa6-regular:circle-stop" class="text-5xl text-primary" @click="cancel" />
+              </div>
+            </nav>
+            <BlogToc :links="article.body.toc.links" />
+          </div>
         </aside>
         <div
           class="col-span-full md:col-span-6 md:col-start-1 row-start-2 lg:row-start-1 prose w-full pr-4 text-body pb-20"
+          id="content-to-read"
         >
           <ContentRenderer :value="article">
             <template #empty>
@@ -67,6 +77,19 @@ const [prev, next] = data.value || []
 const section = 'blog'
 
 useCreateBlogHead(article)
+
+const { 
+  read,
+  pause,
+  resume,
+  cancel,
+  voices,
+  voiceSelected,
+  synth,
+  isPending,
+  isPaused
+} = useVoiceReader()
+
 </script>
 
 
