@@ -34,10 +34,10 @@
         <aside class="col-span-full lg:col-span-2 row-start-1 w-full">
           <div class="block lg:sticky top-20">
             <nav class="p-4 bg-primaryContainer text-onPrimaryContainer border border-slate-200 rounded-lg mb-4 ">
-              <div v-if="errored">
-                  error using your voice reader
+              <div class="mb-4">
+                Voice reader will take your browser language
               </div>
-              <div v-else>
+              <div>
                 <Icon v-if="!isPending || isPaused" name="fa6-regular:circle-play" class="text-5xl mr-4 text-primary" @click="() => isPaused ? resume() : read()" />
                 <Icon v-else name="fa6-regular:circle-pause" class="text-5xl mr-4 text-primary" @click="pause"/>
                 <Icon name="fa6-regular:circle-stop" class="text-5xl text-primary" @click="cancel" />
