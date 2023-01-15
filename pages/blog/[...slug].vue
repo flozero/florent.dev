@@ -35,7 +35,7 @@
           <div class="block lg:sticky top-20">
             <nav class="p-4 bg-primaryContainer text-onPrimaryContainer border border-slate-200 rounded-lg mb-4 ">
               <div class="mb-4">
-                Voice reader will take your browser language
+                Error using speechSynthesis API
               </div>
               <div>
                 <Icon v-if="!isPending || isPaused" name="fa6-regular:circle-play" class="text-5xl mr-4 text-primary" @click="() => isPaused ? resume() : read()" />

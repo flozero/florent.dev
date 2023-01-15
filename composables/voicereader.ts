@@ -3,9 +3,21 @@ import { Ref } from "nuxt/dist/app/compat/capi"
 export function useVoiceReader() {
     const synth: Ref<null | SpeechSynthesis>  = ref(null)
     const voices: Ref<SpeechSynthesisVoice[] | []> = ref([])
+    const voiceSelected: Ref<SpeechSynthesisVoice | null> = ref(null)
     const isPending = ref(false)
     const isPaused = ref(false)
     const errored = ref(false)
+
+    const populateVoiceList = () => {
+      const _found = synth.value?.getVoices().filter(function (v) {
+        return v.lang == "en-US"
+      });
+      if (!_found) {
+        errored.value = true
+      } else {
+        voiceSelected.value = _found[0]
+      }
+    }
 
     const read = () => {
       if (synth.value?.speaking) {
@@ -24,6 +36,7 @@ export function useVoiceReader() {
         cancel()
       };
 
+      utterThis.voice = unref(voiceSelected)
       utterThis.pitch = 1;
       utterThis.rate = 0.9;
       synth.value?.speak(utterThis);
@@ -54,13 +67,22 @@ export function useVoiceReader() {
     })
 
     onMounted(() => {
-      synth.value = window.speechSynthesis;
+      if ('speechSynthesis' in window){
+        synth.value = window.speechSynthesis;
+
+        setTimeout(() => {
+          populateVoiceList()
+        }, 250)
+      } else {
+        errored.value = true
+      }
   })
     
     return {
         cancel,
         pause,
         resume,
+        voiceSelected,
         voices,
         synth,
         read,
