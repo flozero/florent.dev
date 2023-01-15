@@ -3,6 +3,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
   },
   modules: [
+    '@vueuse/nuxt',
     '@nuxt/image-edge',
     '@nuxtjs/tailwindcss',
     '@nuxt/content',

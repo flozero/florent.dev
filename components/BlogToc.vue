@@ -1,3 +1,24 @@
+<template>
+  <nav class="p-4 bg-primaryContainer text-onPrimaryContainer border border-slate-200 rounded-lg">
+    <header class="pb-2 mb-2 border-b border-slate-200">
+      <h2 class="text-xl font-bold">
+        Table of contents
+      </h2>
+    </header>
+    <ul class="flex flex-col gap-2 px-2 text-sm">
+      <li
+        v-for="link of flattenLinks(links)"
+        :key="link.id"
+        class="text-body"
+        :class="link.depth === 3 ? 'pl-3' : ''"
+      >
+        <NuxtLink :href="`#${link.id}`" class="hover:underline">
+          {{ link.text }}
+        </NuxtLink>
+      </li>
+    </ul>
+  </nav>
+</template>
 
 <script setup lang="ts">
 defineProps(['links'])
@@ -15,25 +36,3 @@ const flattenLinks = (links: Array<any>) => {
   return _links
 }
 </script>
-
-<template>
-  <nav class="p-4 bg-primaryContainer text-onPrimaryContainer border border-slate-200 rounded-lg">
-    <header class="pb-2 mb-2 border-b border-slate-200">
-      <h2 class="text-xl font-bold">
-        Table of contents
-      </h2>
-    </header>
-    <ul class="flex flex-col gap-2 px-2 text-sm">
-      <li
-        v-for="link of flattenLinks(links)"
-        :key="link.id"
-        class="text-slate-500"
-        :class="link.depth === 3 ? 'pl-3' : ''"
-      >
-        <NuxtLink :href="`#${link.id}`" class="hover:underline">
-          {{ link.text }}
-        </NuxtLink>
-      </li>
-    </ul>
-  </nav>
-</template>

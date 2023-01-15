@@ -33,5 +33,8 @@
     "lint-staged": {
       "*.{js,jsx,ts,tsx}": "npm run lint:fix"
     }
+  },
+  "dependencies": {
+    "@vueuse/nuxt": "^9.10.0"
   }
 }
