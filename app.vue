@@ -6,15 +6,15 @@
 </template>
 
 <script setup>
-const description = 'Florent Giraud, Software architect working at paper, with over 7 years experience in Frontend development. Previously NuxtJS Ambassador.'
-const ogTitle = 'Florent helps others learn web development and more'
-const twitterDescription = 'My website of where I showcase my blog, resources etc'
+const description = 'Florent Giraud, Software architect travaillant a paper, avec plus de 7 ans d\'experience. Anciennement NuxtJS Ambassadeur.'
+const ogTitle = 'Florent aide les autres a apprendre le web development et plus'
+const twitterDescription = 'Florent aide les autres a apprendre le web development et plus'
 const twitterCard = 'https://florent.dev/twitter-card.png'
 const mySite = 'https://florent.dev'
 
 useHead({
   htmlAttrs: {
-    lang: 'en',
+    lang: 'fr',
   },
   charset: 'utf-8',
   title: ogTitle,

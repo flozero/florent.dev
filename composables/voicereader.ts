@@ -10,7 +10,7 @@ export function useVoiceReader() {
 
     const populateVoiceList = () => {
       const _found = synth.value?.getVoices().filter(function (v) {
-        return v.lang == "en-US"
+        return v.lang == "fr-CA"
       });
       if (!_found) {
         errored.value = true

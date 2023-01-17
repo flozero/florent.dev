@@ -2,10 +2,10 @@
     <main class="content-container max-w-[1400px] mx-auto">
         <div class="py-4 mb-4">
           <h1 class="text-headline font-bold">
-            All articles
+            Tous les articles
           </h1>
           <p>
-            Here's a list of all my articles
+            Ici la list de tous mes articles
           </p>
         </div>
         <ul class="grid grid-cols-1 md:grid-cols-2">
@@ -23,9 +23,8 @@ const { data: articles } = await useAsyncData('articles',
     .sort({ date: -1 })
     .find(),
 )
-const title: string = 'All Blog Posts'
-const description: string = 'Here\'s a list of all my blog posts'
-const section = 'blog'
+const title: string = 'Tous les articles'
+const description: string = 'Ici la liste de tous mes articles'
 useHead({
   title,
   meta: [{ name: 'description', content: description }],

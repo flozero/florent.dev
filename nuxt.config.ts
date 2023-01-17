@@ -32,11 +32,11 @@ export default defineNuxtConfig({
     },
     documentDriven: true
   },
-  //  nitro: {
-  //   prerender: {
-  //     routes: ['/sitemap.xml']
-  //   }
-  // },
+   nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
+  },
   build: {
     transpile: ['lite-youtube'],
   },

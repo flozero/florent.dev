@@ -34,7 +34,7 @@
         <aside class="col-span-full lg:col-span-2 row-start-1 w-full">
           <div class="block lg:sticky top-20">
             <nav class="p-4 bg-primaryContainer text-onPrimaryContainer border border-slate-200 rounded-lg mb-4 ">
-              <div class="text-label mb-4">Using speechSynthesis web API</div>
+              <div class="text-label mb-4">Utilise speechSynthesis web API</div>
               <div class="mb-4" v-if="errored">
                 Error using speechSynthesis API
               </div>

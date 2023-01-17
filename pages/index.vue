@@ -3,12 +3,12 @@
     <Card class="md:py-40 py-24 mb-10 text-center bg-primaryContainer text-onPrimaryContainer imgKit">
         <h1 class="text-display">Florent giraud</h1>
         <h2 class="text-headline mb-8">
-          You are more than the framework you've mastered.
+          Vous êtes plus que le framework que vous avez mastered.
         </h2>
     </Card>
     <main class="pb-20 md:pb-0  max-w-[1400px] mx-auto">
       <section id="news" class="mb-8">
-        <h2 class="text-headline mb-4">Latest article</h2>
+        <h2 class="text-headline mb-4">Denier articles</h2>
         <ul class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 grid-cols-1">
           <li v-for="article in articles" :key="article._path">
             <PreviewArticle :article="article" />
