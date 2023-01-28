@@ -8,7 +8,7 @@
     </Card>
     <main class="pb-20 md:pb-0  max-w-[1400px] mx-auto">
       <section id="news" class="mb-8">
-        <h2 class="text-headline mb-4">Denier articles</h2>
+        <h2 class="text-headline mb-4">Dernier articles</h2>
         <ul class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 grid-cols-1">
           <li v-for="article in articles" :key="article._path">
             <PreviewArticle :article="article" />
